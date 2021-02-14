@@ -1,6 +1,11 @@
 import requests
 
-endpoint = 'https://www.sec.gov/include/ticker.txt'
+#endpoint = 'https://www.sec.gov/include/ticker.txt'
+#endpoint = 'http://www.e-swoosh.co.uk/apps/stocks/testticker.txt'
+
+endpoint = 'http://www.e-swoosh.co.uk/apps/stocks/LSE.txt'
+
+
 
 
 def get_symbols():

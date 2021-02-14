@@ -11,17 +11,20 @@ import yfinance2pg.db as db
 
 @multitasking.task
 def download_company(symbol, companies):
+    print(symbol)
     try:
         try:
             data = yfinance.Ticker(symbol).info
             industry = data.get('industry')
             sector = data.get('sector')
             name = data.get('longName')
+            
         except Exception:
             industry = None
             sector = None
             name = None
-        companies.append((symbol, name, 'US', industry, sector,))
+            print('missing data')
+        companies.append((symbol, name, 'LSE', industry, sector,))
     except Exception as e:
         print('Failed for {0}: {1}'.format(symbol, e))
 

@@ -84,4 +84,4 @@ def get_symbols(curs):
 
 def get_from_date(curs):
     curs.execute('SELECT MAX(Day) FROM PriceVolume')
-    return str(curs.fetchone()[0] or '1970-01-01')
+    return str(curs.fetchone()[0] or '2010-01-01')

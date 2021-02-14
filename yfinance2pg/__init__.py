@@ -24,7 +24,6 @@ connection_options = {
     'port': args.get('port')
 }
 
-
 def start():
     start = time.time()
 

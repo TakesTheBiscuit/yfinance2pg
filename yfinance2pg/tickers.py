@@ -1,17 +1,14 @@
 import requests
 
-<<<<<<< HEAD
 #endpoint = 'https://www.sec.gov/include/ticker.txt'
 #endpoint = 'http://www.e-swoosh.co.uk/apps/stocks/testticker.txt'
 
-endpoint = 'http://www.e-swoosh.co.uk/apps/stocks/LSE.txt'
+endpoint = 'http://www.e-swoosh.co.uk/apps/stocks/LSEnew.csv'
 
 
-=======
->>>>>>> 9855a857ef376d69b02e6fa25a6cc558f6d630fb
 
 def get_sec_list():
-    endpoint = 'https://www.sec.gov/include/ticker.txt'
+    endpoint = 'http://www.e-swoosh.co.uk/apps/stocks/LSEnew.csv'
     tickers = []
 
     r = requests.get(endpoint)
@@ -19,6 +16,7 @@ def get_sec_list():
     for line in r.text.split('\n'):
         tickers.append(line.split('\t')[0].upper())
 
+    print(tickers)
     return tickers
 
 

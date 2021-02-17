@@ -1,3 +1,21 @@
+# What is this monster?
+
+docker-compose up
+
+1. database will be created
+
+2. Get some data from yahoo finance on this box:
+
+- `cd .\yfinance2pg\`
+- `C:\users\paul\AppData\Local\Programs\Python\Python38\python.exe save_data_to_csv.py -symbol X7PS -time_window daily`
+
+
+
+
+
+
+
+
 # yfinance2pg
 
 Download financial data to postgres database from yahoo finance.
